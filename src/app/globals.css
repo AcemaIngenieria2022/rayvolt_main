@@ -1,0 +1,44 @@
+:root {
+  --rayvolt-bg: #f8fafc;
+  --rayvolt-dark: #0f172a;       /* Slate muy oscuro para máxima legibilidad */
+  --rayvolt-navy: #1e1b4b;       /* Azul marino/violeta profundo de la marca */
+  --rayvolt-mint: #5ce1b4;       /* Turquesa eléctrico */
+  --rayvolt-purple: #a855f7;     /* Violeta neón */
+}
+
+html, body {
+  height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--rayvolt-bg);
+  color: var(--rayvolt-navy);
+  font-family: var(--font-poppins), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Animación de pulso eléctrico para el indicador de status */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(92, 225, 180, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(92, 225, 180, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(92, 225, 180, 0);
+  }
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--rayvolt-mint);
+  animation: pulseGlow 2s infinite;
+}
