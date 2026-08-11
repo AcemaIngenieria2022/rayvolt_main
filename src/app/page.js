@@ -16,7 +16,7 @@ export default function Home() {
       overflow: 'hidden'
     }}>
       
-      {/* Luces direccionales de alta intensidad (Energy Flow) */}
+      {/* Luces direccionales de alta intensidad */}
       <div style={{
         position: 'absolute', top: '-10%', left: '-10%', width: '50vw', height: '50vw',
         background: 'radial-gradient(circle, rgba(92, 225, 180, 0.28) 0%, transparent 65%)',
@@ -40,7 +40,7 @@ export default function Home() {
         pointerEvents: 'none'
       }} />
 
-      {/* TARJETA / PANEL PRINCIPAL (Diseño asimétrico neón) */}
+      {/* TARJETA / PANEL PRINCIPAL */}
       <div style={{
         position: 'relative',
         zIndex: 10,
@@ -77,30 +77,7 @@ export default function Home() {
           boxShadow: '2px 0 12px rgba(92, 225, 180, 0.6)'
         }} />
 
-        {/* Badge de Estado Activo */}
-        <div style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '10px',
-          padding: '6px 18px',
-          borderRadius: '99px',
-          backgroundColor: 'rgba(30, 27, 75, 0.04)',
-          border: '1px solid rgba(168, 85, 247, 0.18)',
-          marginBottom: '36px'
-        }}>
-          <div className="status-dot" />
-          <span style={{
-            fontSize: '11px',
-            fontWeight: '700',
-            letterSpacing: '2.5px',
-            color: 'var(--rayvolt-navy)',
-            textTransform: 'uppercase'
-          }}>
-            Plataforma en desarrollo
-          </span>
-        </div>
-
-        {/* Logo Ray Volt con reflejo suave */}
+        {/* Logo Ray Volt */}
         <div style={{
           marginBottom: '28px',
           width: '100%',
@@ -114,6 +91,7 @@ export default function Home() {
             width={310}
             height={155}
             priority
+            unoptimized
             style={{ 
               objectFit: 'contain',
               filter: 'drop-shadow(0px 8px 16px rgba(30, 27, 75, 0.08))'
